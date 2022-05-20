@@ -39,7 +39,6 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = guess();
-    console.log(typeof playerSelection)
     computerSelection = computerPlay();
     if(!playerSelection || playerSelection.trim().length === 0 ) return alert('Input is invalid');   
 
@@ -55,8 +54,5 @@ function playRound(playerSelection, computerSelection) {
         } 
         return `You win! Scissor beats Paper!`
     } 
-        
-
-
 
 game();
