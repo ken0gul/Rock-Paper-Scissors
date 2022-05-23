@@ -32,7 +32,7 @@ function game() {
     
 }
 
-// Creata random computer input
+// Create random computer input
 function computerPlay() {
     const data = ["rock", "paper", "scissor"];
     let random = Math.floor(Math.random() * 3);
