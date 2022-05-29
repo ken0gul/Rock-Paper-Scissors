@@ -22,7 +22,7 @@ let buttons = `
 let scores = `
         <div class="scores">
             <p class="score score__user">USER : 0</p>
-            <p class="score score__computer">Computer : 0</p>
+            <p class="score score__computer">PC : 0</p>
             </div>
 
 `// Creating WINNER Element
@@ -88,7 +88,7 @@ document.body.appendChild(winner);
                 pc++;
                 scoreComputer.textContent = `Computer : ${pc}`
             }
-            if(user + pc === 5) {
+            if(user === 5 || pc === 5) {
                 isGameOver = true;
                 if (user > pc)   {
                    winner.textContent = `USER WIN!`
