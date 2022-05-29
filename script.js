@@ -54,7 +54,7 @@ document.body.appendChild(winner);
             userInput = e.target.textContent;
             computerInput = computerPlay();
             // When no one wins
-            if(userInput === computerInput) para.textContent = 'Nobody WIN!'
+            if(userInput === computerInput) para.textContent = `User: ${userInput} Computer: ${computerInput} Nobody WIN!`
             // When user Win!
             if(userInput === 'scissor' && computerInput === 'paper') {
                 para.textContent =`User: ${userInput} - Computer: ${computerInput} User WINS!`
