@@ -6,10 +6,11 @@ let userInput;
 let user = 0;
 let pc = 0;
 let isGameOver = false;
+let winner;
 
 // Creating DOM
 
-const createDom = () => {
+function createDom() {
 
     
     // Creating buttons and displayin rounds
@@ -33,7 +34,7 @@ const createDom = () => {
         </div>
         
 `// Creating WINNER Element
-let winner = document.createElement('p');
+winner = document.createElement('p');
 winner.classList.add('winner');
 document.body.appendChild(winner);
 
@@ -42,8 +43,8 @@ document.body.appendChild(winner);
     // Insert them to body
     document.body.insertAdjacentHTML("beforeend", buttons);
 };
+createDom();
 
-createDom()
 
     // Create random computer input
     function computerPlay() {
@@ -59,16 +60,10 @@ createDom()
     const container = document.querySelector('.container');
     const SCORES = document.querySelector(".scores");
     
-    const gameOver = () => {
-        container.style.opacity = '0.2'
-        container.style.display = 'none';
-        winner.style.textAlign = 'center'
-        winner.style.fontSize = '50px'
-    }
+ 
     
     
-    const game = e => {
-
+    function game(e) {
         userInput = e.target.textContent;
         computerInput = computerPlay();
             // When no one wins
@@ -127,8 +122,10 @@ createDom()
             }
             
             if (isGameOver) {
-                gameOver()
-
+                container.style.opacity = '0.2'
+                container.style.display = 'none';
+                winner.style.textAlign = 'center'
+                winner.style.fontSize = '50px'
             }
             
         }
