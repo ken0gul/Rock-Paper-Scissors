@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all 4s ease-in-out;
     
 }
 
@@ -49,3 +50,12 @@ p {
     text-transform: uppercase;
 }
 
+.hidden {
+    display: none;
+}
+
+.starter {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+}
