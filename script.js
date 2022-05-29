@@ -5,6 +5,8 @@ let user = 0;
 let pc = 0;
 let isGameOver = false;
 
+
+
 // Creating buttons and displayin rounds
 
 let buttons = `
@@ -116,7 +118,20 @@ document.body.appendChild(winner);
         
     });
    
-    
+    // Make everything invisible in the beginnin
+     document.querySelector('.scores').classList.add('hidden');
+     document.querySelector('.container').classList.add('hidden');
+
+     setTimeout(function() {
+         document.body.style.opacity = 0;
+     },1000)
+
+    let startGame = setTimeout(function( )  {
+        document.querySelector('.scores').classList.remove('hidden');
+     document.querySelector('.container').classList.remove('hidden');
+     document.querySelector('.starter').style.display = 'none'
+     document.body.style.opacity = 1;
+    },5000);     
 
     
     
